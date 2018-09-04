@@ -6,6 +6,7 @@ class Car
   private string _makeModel;
   private int _price;
   private int _miles;
+  private string _carInfo;
 
   public  void SetMakeModel(string newMakeModel){
       _makeModel = newMakeModel;
@@ -34,6 +35,14 @@ class Car
     {
       return _miles;
     }
+    public void SetCarInfo(string newCarInfo)
+    {
+      _carInfo = newCarInfo;
+    }
+    public string GetCarInfo()
+    {
+      return _carInfo;
+    }
 
 }
 
@@ -46,26 +55,31 @@ public class Program
     porsche.SetMakeModel("2014 Porsche 911");
     porsche.SetPrice(114991);
     porsche.SetMiles(7864);
+    porsche.SetCarInfo("You will fee like a kid again driving this beast");
 
     Car ford = new Car();
     ford.SetMakeModel("2011 Ford F450");
     ford.SetPrice(55995);
     ford.SetMiles(14241);
+    ford.SetCarInfo("Found on road dead");
 
     Car lexus = new Car();
     lexus.SetMakeModel("2013 Lexus RX 350");
     lexus.SetPrice(44700);
     lexus.SetMiles(20000);
+    lexus.SetCarInfo("Over pirced Honda/Toyota");
 
     Car mercedes = new Car();
     mercedes.SetMakeModel("Mercedes Benz CLS550");
     mercedes.SetPrice(39900);
     mercedes.SetMiles(37979);
+    mercedes.SetCarInfo("Over Priced BMW");
 
     Car pos = new Car();
-    pos.SetMakeModel("Piece of Shit");
+    pos.SetMakeModel("Piece o' Shit");
     pos.SetPrice(100);
     pos.SetMiles(450000);
+    pos.SetCarInfo("Pefect for street parking. Who cares if you get hit.");
 
     List<Car> Cars = new List<Car>() { porsche, ford, lexus, mercedes, pos };
 
@@ -90,6 +104,7 @@ public class Program
     foreach(Car automobile in CarsMatchingSearch)
     {
       Console.WriteLine(automobile.GetMakeModel());
+      Console.WriteLine(automobile.GetCarInfo());
     }
   }
 }
