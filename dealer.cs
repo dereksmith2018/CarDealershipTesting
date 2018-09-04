@@ -99,10 +99,20 @@ public class Program
       {
         CarsMatchingSearch.Add(automobile);
       }
-    }
+
+      }
+
+       if(CarsMatchingSearch.Count == 0)
+      {
+        Console.WriteLine("no car");
+        }
+
+
+
 
     foreach(Car automobile in CarsMatchingSearch)
     {
+
       Console.WriteLine(automobile.GetMakeModel());
       Console.WriteLine(automobile.GetCarInfo());
     }
