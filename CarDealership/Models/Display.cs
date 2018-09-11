@@ -14,9 +14,9 @@ namespace CarDealership.Models
       //private string _newCar;
       private static List<Car> _instances = new List<Item> {};
 
-      public Car (string makeModel, string carInfo, int newPrice, int newMiles)
+      public Car (string newMakeModel, string carInfo, int newPrice, int newMiles)
       {
-        _makeModel = makeModel;
+        _makeModel = newMakeModel;
         _carInfo = newCarInfo;
         _price = newPrice;
         _miles = newMiles;
