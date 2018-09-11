@@ -1,23 +1,30 @@
-<h1>Add New Car</h1>
-<form id="new-car" action="/home/display_car" method="post">
-  <div class="form-group">
-    <label for="newMakeModel">Car Model</label>
-    <input id="newMakeModel" name="newMakeModel" class="form-control" type="text">
-  </div>
-  <div class="form-group">
-    <label for="newCarInfo">Enter some history details of the car.</label>
-    <input id="newCarInfo" name="newCarInfo" class="form-control" type="text">
-  </div>
-  <div class="form-group">
-    <label for="newMiles">Enter Miles</label>
-    <input id="newMiles" name="newMiles" class="form-control" type="text">
-  </div>
-  <div class="form-group">
-    <label for="newPrice">Enter Price</label>
-    <input id="newPrice" name="newPrice" class="form-control" type="text">
-  </div>
-  <button type="submit" class="btn">Show me the story!</button>
-</form>
-<div>
-
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Car Dealership</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <h1>Fill in to submit new car.</h1>
+    <form action="/home_page" method="post">
+      <div class='form-group'>
+        <label for='newMakeModel'>Enter a Car Model/Type</label>
+        <input id='newMakeModel' name='newMakeModel' class='form-control' type='text'>
+      </div>
+      <div class='form-group'>
+        <label for='newCarInfo'>Enter the history of the car.</label>
+        <input id='newCarInfo' name='newCarInfo' class='form-control' type='text'>
+      </div>
+      <div class='form-group'>
+        <label for='newPrice'>Enter the price for the vehicle.</label>
+        <input id='newPrice' name='newPrice' class='form-control' type='text'>
+      </div>
+      <div class='form-group'>
+        <label for='newMiles'>Enter the miles the car has traveled</label>
+        <input id='newMiles' name='newMiles' class='form-control' type='text'>
+      </div>
+      <button type='submit' class='btn'>Go!</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<h1>Welcome A Car Dealership!</h1>
+@foreach(var newCar in Model)
+{
+<li>@newCar.GetMakeModel() | @newCar.GetCarInfo() | @newCar.GetPrice() | @newCar.GetMiles()</li>
+}
+<a href='/'>Add a new car</a>
+<a href='/home'></a>

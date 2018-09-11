@@ -1,27 +1,26 @@
-using System;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace CarDealership.Models
 {
-  public class Display
+  public class Car
   {
-    class Car
-    {
       private string _makeModel;
-      private int _price;
-      private int _miles;
+      private string _price;
+      private string _miles;
       private string _carInfo;
       //private string _newCar;
-      private static List<Car> _instances = new List<Item> {};
+      private static List<Car> _instances = new List<Car> {};
 
-      public Car (string newMakeModel, string carInfo, int newPrice, int newMiles)
+      public Car(string newMakeModel, string newCarInfo, string newPrice, string newMiles)
       {
         _makeModel = newMakeModel;
         _carInfo = newCarInfo;
         _price = newPrice;
         _miles = newMiles;
       }
-      public  void SetMakeModel(string newMakeModel)
+
+      public void SetMakeModel(string newMakeModel)
       {
           _makeModel = newMakeModel;
       }
@@ -29,26 +28,20 @@ namespace CarDealership.Models
       {
           return  _makeModel;
       }
-      public void SetPrice(int newPrice)
-      {
-        if (newPrice >= 0)
+      public void SetPrice(string newPrice)
+
         {
           _price = newPrice;
-        }
-        else
-        {
-          Console.WriteLine("You cheep checky `bastard!!!");
-        }
       }
-      public int GetPrice()
+      public string GetPrice()
       {
         return _price;
       }
-      public void SetMiles(int newMiles)
+      public void SetMiles(string newMiles)
       {
         _miles = newMiles;
       }
-      public int GetMiles()
+      public string GetMiles()
       {
         return _miles;
       }
@@ -66,9 +59,8 @@ namespace CarDealership.Models
       }
       public static List<Car> GetAll()
       {
-        return new List<Car>(_instances);
+        return _instances;
       }
 
     }
   }
-}
