@@ -16,7 +16,7 @@ namespace CarDealership.Controllers
     [HttpPost("/home_page")]
     public ActionResult Index()
     {
-      Car myCar = new Car(Request.Form["newMakeModel"], Request.Form["newCarInfo"], Request.Form["newCarInfo"], Request.Form["newMiles"]);
+      Car myCar = new Car(Request.Form["newMakeModel"], Request.Form["newCarInfo"], Request.Form["newCarInfo"], Request.Form["newMiles"]); //int.Parse( Request.Form["newCarInfo"]); returns string into integer
       myCar.Save();
       List<Car> allCars = Car.GetAll();
 
