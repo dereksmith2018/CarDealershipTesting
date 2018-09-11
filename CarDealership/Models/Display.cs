@@ -60,6 +60,14 @@ namespace CarDealership.Models
       {
         return _carInfo;
       }
+      public void Save()
+      {
+        _instances.Add(this);
+      }
+      public static List<Car> GetAll()
+      {
+        return new List<Car>(_instances);
+      }
 
     }
   }
